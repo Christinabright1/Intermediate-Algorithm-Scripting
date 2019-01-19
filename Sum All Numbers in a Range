@@ -1,0 +1,31 @@
+# Intermediate-Algorithm-Scripting
+Answer of intermediate Algorithm Scripting in freeCodeCamp
+
+
+We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them.
+
+The lowest number will not always come first.
+
+
+//First number of the array should be the min value
+//Second number of the array should be max value
+
+-Print out values between min and max value(Using for loop and push)
+-Use reduce to calculate their sum
+
+
+function sumAll(arr) {
+  let newArr= [];
+  let minValue= Math.min(...arr);
+  let maxValue= Math.max(...arr);
+  for(let i=minValue; i<= maxValue; i++){
+    newArr.push(i);
+  }
+  console.log(newArr);
+
+  let reduceValue= newArr.reduce((pre,cur) => pre+cur);
+
+  return reduceValue;
+}
+
+sumAll([1, 4]);
