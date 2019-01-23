@@ -1,0 +1,47 @@
+# Intermediate-Algorithm-Scripting
+Answer of intermediate Algorithm Scripting in freeCodeCamp
+
+
+       exercice
+
+Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. In other words, 
+return the symmetric difference of the two arrays.
+
+//Create a function with two arrays and return the value that are not find in both. 
+A= [1,2,3,4];
+B=[1,2,3,4,5]; return 5
+
+Hints
+-Write a function that check if the value is in an array(indexOf array start form 0, if indexOf array is egal to -1 ,
+it means that value is not in the array)
+
+
+
+
+
+function isNotInArray(val, arr){
+  return arr.indexOf(val) === -1;
+}
+
+function diffArray(arrayA,arrayB){
+  let newArray = [];
+
+  for(let i = 0; i < arrayA.length; i++){
+    let val = arrayA[i]
+    if (isNotInArray(val, arrayB)) {
+      newArray.push(val);
+    }
+  }
+
+  for(let i = 0; i < arrayB.length; i++){
+    let val = arrayB[i]
+    if (isNotInArray(val, arrayA)) {
+      newArray.push(val);
+    }
+  }
+
+  return newArray;
+}
+
+console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));
+
