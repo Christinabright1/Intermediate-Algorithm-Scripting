@@ -1,0 +1,26 @@
+# Intermediate-Algorithm-Scripting
+Answer of intermediate Algorithm Scripting in freeCodeCamp
+
+Add all numbers.
+
+Hints
+- Use rest operator to converse a numbers into an array
+
+-Use forEach 
+
+- or Use reduce
+
+//use reduce
+function addallNumbers(...numbers){
+    return numbers.reduce((acc, curr) => acc+curr); 
+    
+}
+console.log(addallNumbers(1,2,4,5));
+
+//Use forEach
+
+function addallNumbes(...numbers){
+let total=0;
+return numbers.forEach(num => tatal += num );
+}
+console.log(addallNumbers(1,2,4,5));
