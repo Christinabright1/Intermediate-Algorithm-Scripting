@@ -1,2 +1,15 @@
 # Intermediate-Algorithm-Scripting
 Answer of intermediate Algorithm Scripting in freeCodeCamp
+
+
+function fibonacci(num) {
+  if(num === 0 || num === 1){
+    return 1;
+  }else{
+    return fibonacci(num -1)+fibonacci(num -2);
+  }
+  
+  return num;
+}
+
+console.log(fibonacci(10));
