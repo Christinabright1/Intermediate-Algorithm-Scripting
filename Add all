@@ -21,6 +21,6 @@ console.log(addallNumbers(1,2,4,5));
 
 function addallNumbes(...numbers){
 let total=0;
-return numbers.forEach(num => tatal += num );
+return numbers.forEach(num => total += num );
 }
 console.log(addallNumbers(1,2,4,5));
