@@ -1,0 +1,26 @@
+# Intermediate-Algorithm-Scripting
+Answer of intermediate Algorithm Scripting in freeCodeCamp
+
+
+
+  //function 
+
+  let age= 29;
+   
+ let obj= {
+   
+   name: "Christina",
+   city: "Lisbon"
+ };
+ 
+ 
+   function change(a, b){
+         
+     a= 30;
+     b.city= "Hamburg";
+   }
+
+  change(age , obj);
+
+  console.log(age);
+  console.log(obj.city);
