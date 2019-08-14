@@ -1,0 +1,28 @@
+# Intermediate-Algorithm-Scripting
+Answer of intermediate Algorithm Scripting in freeCodeCamp
+Write a function that returns the number of vowels used in a string. 
+Vowels are the characters 'a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', and 'U'.
+
+Answer
+
+-Split a string 
+-write another function to check if the character is vowel
+- filter the second function to get the vowel in the string  then get the length of the vowel
+
+// Code goes here
+
+
+function getVowel(str){
+  let splitStr= str.split("");
+  let listofVowel= splitStr.filter(isVowel);
+  
+  return listofVowel.length;
+}
+
+//function to check if the character is Vowel
+
+function isVowel(c){
+  
+  return ['a','e','i','o','u'].indexOf(c.toLowerCase()) !== -1;
+}
+console.log(getVowel("Hi There!"));
