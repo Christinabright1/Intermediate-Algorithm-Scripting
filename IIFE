@@ -1,0 +1,6 @@
+# Intermediate-Algorithm-Scripting
+Answer of intermediate Algorithm Scripting in freeCodeCamp
+let greeting= function(name){
+  return "Hello " + name;
+}("Jonh");
+console.log(greeting);
