@@ -4,3 +4,11 @@ let greeting= function(name){
   return "Hello " + name;
 }("Jonh");
 console.log(greeting);
+
+
+
+let firstName="Jonh";
+(function(name){
+  return "Hello" + name;
+}(firstName));
+
