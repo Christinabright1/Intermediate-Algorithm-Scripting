@@ -1,0 +1,15 @@
+# Intermediate-Algorithm-Scripting
+Answer of intermediate Algorithm Scripting in freeCodeCamp
+
+
+function swap(arr){
+    let swapNum;
+   arr[1] = 9 ;
+   arr[2] = 7;
+   const digitsToSort = arr.slice(0, 1);
+   const remainingDigits = arr.slice(1);
+   const newDigits = digitsToSort.sort((a, b) => b - a).concat(remainingDigits);
+   return  newDigits;
+}
+
+console.log(swap([2,7,9,5]));
