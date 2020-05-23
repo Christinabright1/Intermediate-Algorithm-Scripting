@@ -1,0 +1,25 @@
+Ce que la fonction retourne est différent des choses que la fonction affiche pendant son exécution.
+
+Quand tu passes un appel de fonction à console.log 
+
+console.log reçoit ce que la fonction retourne mais pas ce que la fonction affiche
+
+Tant qu'il n'y a pas de "return" dans une fonction (et qu'elle n'est pas une "arrow function"), c'est que la fonction ne renvoie rien.
+
+
+function isTrue(what) {
+  if (what)
+    return true
+  else
+    console.log("not true")
+}
+
+Quand est ce que  return est dans for loop  ?
+
+Seulement quand tu veux (pour une condition donnée), sortir de la boucle avant qu'elle ne soit terminée.
+
+Par exemple, si tu fais une recherche dans un tableau en utilisant une en boucle, dès que tu as trouvé ce que tu cherches, tu veux sortir sans terminer la boucle.
+
+Donc il peut avoir un return dans une boucle, mais il doit être dans un "if(...)", sinon, ça n'a pas de sens.
+
+Si tu as un return dans une boucle, sans "if(...)", ça veut dire qu'on sort de la boucle dès qu'on rentre dedans. Ce n'est pas utile.
