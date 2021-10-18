@@ -1,0 +1,31 @@
+
+function valid_Anagram(str1, str2){
+  //check if string 1 is equal to string 2
+  if(str1.lenght !== str2.lenght){
+    return false;
+  }
+  //Convert of string into Object
+
+  let frequencyCount1 = {};
+  let frequencyCount2 = {};
+  
+  //first Object
+  for (let val1 of srt1){
+
+    if(frequencyCount1){
+      frequencyCount1[val1] +=1;
+    }else{
+        frequencyCount1[val1]= 1;
+    }
+  }
+  //second Object
+  for (let val2 of srt2){
+    if(frequencyCount2){
+      frequencyCount1[val2] +=1;
+    }else{
+        frequencyCount1[val2]= 1;
+    }
+  }
+  //compare two objects
+  
+}
