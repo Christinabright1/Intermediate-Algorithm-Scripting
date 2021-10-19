@@ -1,31 +1,39 @@
 
+
+//function that return object
+function frequencyObject(str){
+  let frequencyCount = {};
+   for (let val of str){
+
+    if(frequencyCount[val]){
+      frequencyCount[val] +=1;
+    }else{
+        frequencyCount[val]= 1;
+    }
+  }
+  return frequencyCount;
+}
+
 function valid_Anagram(str1, str2){
   //check if string 1 is equal to string 2
-  if(str1.lenght !== str2.lenght){
+  if(str1.length !== str2.length){
     return false;
   }
-  //Convert of string into Object
-
-  let frequencyCount1 = {};
-  let frequencyCount2 = {};
   
-  //first Object
-  for (let val1 of srt1){
-
-    if(frequencyCount1){
-      frequencyCount1[val1] +=1;
-    }else{
-        frequencyCount1[val1]= 1;
-    }
-  }
-  //second Object
-  for (let val2 of srt2){
-    if(frequencyCount2){
-      frequencyCount1[val2] +=1;
-    }else{
-        frequencyCount1[val2]= 1;
-    }
-  }
   //compare two objects
+  //Check if key and val obj1 is in obj2
+  let obj1 = frequencyObject(str1);
+  let obj2 = frequencyObject(str2);
   
+  for(let key in obj1){
+    if (!(key in obj2)){
+      return false;
+    }
+    if(obj1[key] !== obj2[key]){
+      return false;
+    }
+  }
+  return true;
 }
+
+console.log(valid_Anagram('qwerty', 'qeywrt'));
