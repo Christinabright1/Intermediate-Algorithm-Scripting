@@ -1,0 +1,49 @@
+//implementation
+class MyArray {
+  constructor() {
+    this.length = 0;
+    this.data = {};
+  }
+
+  get(index) {
+    return this.data[index];
+  }
+  //push method
+  push(items) {
+    this.data[this.length] = items;
+    this.length++;
+  }
+  //pop
+  pop(items){
+   const lastitems = this.data[this.length-1];
+    delete this.data[lastitems];
+   this.length--;
+    return items;
+  }
+  //delete
+  delete(index){
+    //element to be delete
+    const items = this.data[index];
+    this.shiftItem(items);
+  }
+  //create a shift function
+  shiftItem(index){
+    //loop through the item
+    for(let i =index; i <this.length-1; i++){
+      this.data[i] = this.data[i+1];
+    }
+    //delete data
+    delete this.data[this.length -1];
+    this.length--;
+  }
+}
+const newArr = new MyArray();
+newArr.push('hi');
+newArr.push('Christy');
+newArr.pop();
+console.log(newArr);
+newArr.push("How");
+newArr.push("are");
+newArr.push("doing");
+newArr.delete(1);
+console.log(newArr);
