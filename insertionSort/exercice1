@@ -1,0 +1,20 @@
+function insertionSort(arr) {
+  for(let i = 1; i< arr.length; i++){
+    //store the current Item
+    var currentValue = arr[i];
+    /*Another loop to look at all previous items and shift 
+    them to the right*/
+    //previous index
+    let j = i - 1;
+    //If j(previous index > 0 and the value on that index > than the current value )
+    while(j >= 0 && arr[j] > currentValue){
+      //Shift the item to the right
+      arr[j+1] = arr[j];
+      j--;
+    }
+    currentValue = arr[j+1];
+  }
+  return arr;
+}
+
+ console.log(insertionSort([2,3,5,8 ]))
